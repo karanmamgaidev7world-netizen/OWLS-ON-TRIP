@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Owls on Trip</title>
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Ubunto Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+        <!-- League Spartans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+        <!-- Playfair Display Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+        <!-- Favicon -->
+        <link rel="icon" href="favicon.ico" sizes="any">
+        
+    </head>
+    <body>
+        <div id="HeroSection">
+            <img src="images/from_train_solo_image_1.svg" alt="Hero_Page_Image" style="max-width: 1440px;border-radius: 10px;" class="hero-bg-img" >
+            <div class="hero_content">
+                <h1 style="font-size: 90px;">Owls On Trip</h1>
+                <p style="font-size: 17px;">Welcome to Owls On Trip—your smart AI travel companion. Our intelligent agents craft budget-friendly, custom itineraries so you and your family can relax, explore top destinations, and enjoy a seamless journey together.</p>
+                
+
+            </div>
+
+        </div>
+
+        <main>
+            <!-- Trip Info -->
+            <section id="Trip_Info">
+                <div class="desc" style="max-width: 700px;">
+                    <p class="Bigtext" style="color: blueviolet; font-size: 12px;">
+                        Travel Info
+                    </p>
+                    <h2>Please Fill The Trip Information</h2>
+                    <div class="Bigtext">
+                        Every great getaway starts with a few simple details. Fill out your trip preferences below and let our smart planner organize your days seamlessly. We prioritize your comfort and privacy, ensuring you get an optimized, stress-free route tailored exactly to your travel style.
+                    </div>
+                </div>
+                <form action="">
+                    <fieldset class="section">
+                        <legend>
+                            <span class="section-no">01</span> Trip Details
+                        </legend>
+
+                        <div class="row two">
+                            <div class="field">
+                                <label for="fromLocation">Traveling from
+                                    <span class="req">*</span>
+                                </label>
+                                <input type="text" id="fromLocation" name="fromLocation" placeholder="New Delhi" required>
+                            </div>
+                            <div class="field">
+                                <label for="toLocation">Traveling to
+                                    <span class="req">*</span>
+                                </label>
+                                <input type="text" id="toLocation" name="toLocation" placeholder="Manali" required>
+                            </div>
+                        </div>
+
+                        <div class="row two">
+                            <div class="field">
+                                <label for="startDate">Start date
+                                    <span class="req">*</span>
+                                </label>
+                                <input type="date" id="startDate" name="startDate" required>
+                            </div>
+                            <div class="field">
+                                <label for="endDate">End date
+                                    <span class="req">*</span>
+                                </label>
+                                <input type="date" id="endDate" name="endDate" required>
+                            </div>
+                        </div>
+
+                        <div class="row one">
+                            <div class="field">
+                                <label for="travelers">Number of people
+                                    <span class="req">*</span>
+                                </label>
+                                <input type="number" id="travelers" name="travelers" min="1" placeholder="e.g. 4" required>
+                            </div>
+                        </div>
+
+                        <div class="row one">
+                            <div class="field">
+                                <label>Who's traveling
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="pill-group" role="radiogroup" aria-label="Who's traveling">
+                                    <input type="radio" id="groupElders" name="groupType" value="elders" required>
+                                    <label for="groupElders" class="pill">Elders</label>
+
+                                    <input type="radio" id="groupKids" name="groupType" value="kids">
+                                    <label for="groupKids" class="pill">Young kids</label>
+
+                                    <input type="radio" id="groupGeneral" name="groupType" value="general">
+                                    <label for="groupGeneral" class="pill">General family</label>
+
+                                    <input type="radio" id="groupOther" name="groupType" value="other">
+                                    <label for="groupOther" class="pill">Other</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row one">
+                            <div class="field">
+                                <label>Mode of travel
+                                    <span class="req">*</span>
+                                </label>
+                                <div class="pill-group" role="radiogroup" aria-label="Mode of travel">
+                                    <input type="radio" id="modeAirplane" name="travelMode" value="airplane" required>
+                                    <label for="modeAirplane" class="pill">Airplane</label>
+
+                                    <input type="radio" id="modeTrain" name="travelMode" value="train">
+                                    <label for="modeTrain" class="pill">Train</label>
+
+                                    <input type="radio" id="modeCar" name="travelMode" value="car">
+                                    <label for="modeCar" class="pill">Car</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row one">
+                            <div class="field">
+                                <label for="tripDesc">Tell us about your trip</label>
+                                <textarea id="tripDesc" name="tripDesc" rows="4" placeholder="e.g. A relaxed mountain getaway with lots of hiking and local food..."></textarea>
+                            </div>
+                        </div>
+
+                        <button class="submit-btn" id="Button-1">
+                            Submit
+                        </button>
+
+                    </fieldset>
+
+                </form>
+
+
+            </section>
+        </main>
+    </body>
+</html>
