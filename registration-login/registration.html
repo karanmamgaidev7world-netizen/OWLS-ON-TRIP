@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Owls On Trip</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="registration-style.css">
+
+    <!-- Playfair Display Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Jost Font  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" sizes="any">
+</head>
+<body>
+    <div class="Main-Container">
+        <div class="Container-inside">
+            <h1 style="text-align: center; margin-bottom: 20px; color: #182A4D; " class="bigtext">
+                Pack Your Bags! <span style="font-size: 40px;">🦉</span>
+            </h1>
+            <form class="form-grid">
+                <!-- Header -->
+                <header class="card-head" style="font-family: 'Montserrat', sans-serif;">
+                    <p class="entry-no">Entry No. <span id="entryNo">00001</span></p>
+                    <h1 class="bigtext">Travelers Registration</h1>
+                    <p class="subhead" >Complete every section below. Fields marked <span class="req">*</span> are required for enrollment.</p>
+                </header>
+                <!-- Section 01 -->
+                <fieldset class="section">
+                    <legend>
+                        <span class="section-no">01</span> Identity
+                    </legend>
+            
+                    <div class="row two">
+                        <div class="field">
+                            <label for="firstName">First name 
+                                <span class="req">*</span>
+                            </label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Karan" required>
+                        </div>
+                        <div class="field">
+                            <label for="lastName">Last name 
+                                <span class="req">*</span>
+                            </label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Sharma" required>
+                        </div>
+                    </div>
+            
+                    <div class="row one">
+                    <div class="field">
+                        <label for="dob">Date of birth 
+                            <span class="req">*</span>
+                        </label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 02 -->
+                <fieldset class="section">
+                    <legend><span class="section-no">02</span> Contact</legend>
+            
+                    <div class="row two">
+                        <div class="field">
+                            <label for="email">Email address <span class="req">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            <p class="hint">We'll send your confirmation here.</p>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone number <span class="req">*</span></label>
+                            <div class="phone-group">
+                                <select id="phoneCode" name="phoneCode" class="code-select" aria-label="Country code">
+                                    <option value="+91" selected>🇮🇳 +91</option>
+                                    <option value="+1">🇺🇸 +1</option>
+                                    <option value="+44">🇬🇧 +44</option>
+                                    <option value="+61">🇦🇺 +61</option>
+                                </select>
+                                <input type="tel" id="phone" name="phone" placeholder="98765 43210" required>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- SECTION 03 -->
+                <fieldset class="section">
+                    <legend><span class="section-no">03</span> Address</legend>
+            
+                    <div class="row one">
+                    <div class="field">
+                        <label for="address1">Street address <span class="req">*</span></label>
+                        <input type="text" id="address1" name="address1" placeholder="House no., street, locality" required>
+                    </div>
+                    </div>
+            
+                    <div class="row one">
+                    <div class="field">
+                        <label for="address2">Address line 2 <span class="optional">(optional)</span></label>
+                        <input type="text" id="address2" name="address2" placeholder="Apartment, floor, landmark">
+                    </div>
+                    </div>
+            
+                    <div class="row two">
+                    <div class="field">
+                        <label for="city">City / Town <span class="req">*</span></label>
+                        <input type="text" id="city" name="city" placeholder="New Delhi" required>
+                    </div>
+                    <div class="field">
+                        <label for="state">State / Region <span class="req">*</span></label>
+                        <input type="text" id="state" name="state" placeholder="Delhi" required>
+                    </div>
+                    </div>
+            
+                    <div class="row two">
+                    <div class="field">
+                        <label for="zip">Zip / Postal code <span class="req">*</span></label>
+                        <input type="text" id="zip" name="zip" placeholder="110045" required>
+                    </div>
+                    <div class="field">
+                        <label for="country">Country <span class="req">*</span></label>
+                        <select id="country" name="country" required>
+                        <option value="" disabled selected>Select country</option>
+                        <option value="IN">India</option>
+                        <option value="US">United States</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                        <option value="CA">Canada</option>
+                        <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+                    </div>
+                </fieldset>
+
+                <footer class="card-foot">
+                    <p class="stamp-note">Ink-stamped fields save automatically as you fill them.</p>
+                    <button type="submit" class="submit-btn">
+                    Continue
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                </footer>
+
+             
+            </form>
+        </div>
+
+    </div>
+    
+
+    
+</body>
+</html>
